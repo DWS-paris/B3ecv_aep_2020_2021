@@ -1,0 +1,83 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les paddings et les bborders dans la taille des block */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une basse 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.6rem; /* => 16px */
+    }
+/**/
+
+/* 
+Exo 2
+*/
+    nav{
+        padding: 3rem;
+    }
+
+    ul{
+        border: .1rem solid red;
+        margin-bottom: 3rem;
+    }
+
+    .onRight li:not(:last-child){
+        margin-right: 1rem;
+    }
+
+    .onLeft li:not(:first-child){
+        margin-left: 1rem;
+    }
+
+    .onLeft{
+        text-align: right;
+    }
+
+    .onCenter{
+        text-align: center;
+    }
+
+    .inlineBlock{
+        position: relative;
+    }
+
+    .inlineBlock li{
+        display: inline-block;
+    }
+
+    .inlineBlock.onRight li:last-child{
+        position: absolute;
+        right: 0;
+    }
+
+    .inlineBlock.onLeft li:first-child{
+        position: absolute;
+        left: 0;
+    }
+
+    .inlineBlock.onCenter li:first-child{
+        position: absolute;
+        right: 0;
+    }
+
+    .inlineBlock.onCenter li:last-child{
+        position: absolute;
+        left: 0;
+    }
+/**/

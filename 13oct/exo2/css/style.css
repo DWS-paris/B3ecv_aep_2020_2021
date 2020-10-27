@@ -1,0 +1,58 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les paddings et les bborders dans la taille des block */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une basse 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.6rem; /* => 16px */
+    }
+/**/
+
+/* 
+Exo 2
+*/
+    h1 em{
+        display: block;
+        font-size: .5em;
+    }
+
+    h1::before, h1::after{
+        content: '';
+        display: block;
+    }
+
+    h1::before{
+        width: 3rem;
+        height: 3rem;
+        background-color: blue;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    h1::after{
+        width: 5rem;
+        height: .1rem;
+        background-color: red;
+        margin: 3rem 0;
+    }
+/**/

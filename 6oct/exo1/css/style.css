@@ -1,0 +1,40 @@
+ul{
+    border: .5rem solid red;
+    width: 70vw;
+    height: 70vh;
+    margin: 3rem auto;
+    position: relative;
+}
+
+
+li{
+    list-style: none;
+    padding: 0;
+    height: 5rem;
+    width: 5rem;
+    border: .5rem solid black;
+}
+
+li:nth-child(1){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+li:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+li:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+li:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+}

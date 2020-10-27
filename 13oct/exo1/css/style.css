@@ -1,0 +1,142 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les paddings et les bborders dans la taille des block */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une basse 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.6rem; /* => 16px */
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    body::before {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(255 255 255 / .6);
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        left: 0;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    header, main, footer{
+        position: relative;
+        z-index: 1;
+    }
+
+    header, section{
+        margin-bottom: 3rem;
+    }
+
+    h2::after{
+        content: '';
+        display: block;
+        width: 5rem;
+        height: .2rem;
+        background-color: blue;
+        margin: 2rem 0;
+    }
+/**/
+
+
+
+/* 
+Header
+*/
+    header img{
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    #networks li{
+        display: inline-block;
+    }
+
+    h1 em {
+        font-style: normal;
+        font-weight: 100;
+        font-size: .5em;
+        display: block;
+        margin-bottom: 4rem;
+    }
+/**/
+
+
+
+/* 
+Media queries
+*/
+    @media screen and (min-width: 750px){
+        div{
+            max-width: 90rem;
+            margin: auto;
+        }
+
+        header{
+            width: 25%;
+        }
+
+        main{
+            width: 70%;
+        }
+
+        section{
+            width: 45%;
+        }
+        /* 
+        Common
+        */
+            .flexBoxe{
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -o-flex;
+                display: -ms-flex;
+                display: flex;
+
+                -webkit-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                -o-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                -webkit-justify-content: space-between;
+                -moz-justify-content: space-between;
+                -ms-justify-content: space-between;
+                -o-justify-content: space-between;
+                justify-content: space-between;
+            }
+        /**/
+    }
+/**/
