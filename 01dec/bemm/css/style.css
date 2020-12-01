@@ -1,0 +1,99 @@
+/* nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav li{
+    margin-left: 1rem;
+} */
+
+.maxWidth{
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maxheight{
+    height: 100vh;
+    padding: 5rem 0;
+}
+
+.magicCenter{
+    display: flex;
+    flex-direction: column;
+}
+
+.magicCenter article{
+    margin: auto;
+}
+
+nav{
+    text-align: right;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header {
+    background-image: url(../img/profil.jpg);
+    background-color: antiquewhite;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+main{
+    position: relative;
+}
+
+#cloud{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all .3s ;
+}
+
+#cloud.display{
+    left: 0;
+}
+
+#contacts{
+    background-color: aquamarine;
+}
+
+#portfolio{
+    background-color: bisque;
+}
+
+#networks ul{
+    list-style: none;
+}
+
+#networks {
+    background-color: red;
+    font-size: 5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 2rem;
+
+    cursor: pointer;
+
+    z-index: 10000;
+    position: fixed;
+    right: -8rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: all .3s ;
+}
+
+#networks:hover{
+    right: 0;
+}
+
+#networks a{
+    color: white;
+}
