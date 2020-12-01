@@ -140,3 +140,25 @@ article.display h2::before{
     background-color: white;
     border: 1rem solid blue;
 }
+
+
+
+header a{
+    font-size: 5rem ;
+    color: white;
+    transition: all .3s;
+}
+
+header a:hover{
+    color: red;
+}
+
+footer{
+    padding: 10rem;
+}
+
+footer h2 {
+    border: .5rem solid black;
+    padding: 2rem 6rem;
+    display: inline-block;
+}
