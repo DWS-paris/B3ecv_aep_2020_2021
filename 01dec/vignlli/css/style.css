@@ -1,0 +1,142 @@
+.maxWidth{
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    display: flex;
+    height: 100vh;
+}
+
+header ul{
+    width: calc(100% / 12);
+    list-style: none;
+}
+
+header ul:nth-child(2n + 2){
+    margin-top: 5rem;
+}
+
+header li{
+    height: calc(100% / 7);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header span{
+    width: 10rem;
+    height: 10rem;
+    background-color: #eee;
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+header span a{
+    display: inline-block;
+    margin: auto;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header button {
+    height: 7rem;
+    width: 7rem;
+    padding: 0;
+    font-size: 3rem;
+    border-radius: 50%;
+    background-color: orange;
+    border: none;
+    transition: all .3s;
+}
+
+header nav ul {
+    position: fixed;
+    left: 100%;
+    text-align: right;
+    top: 0;
+    height: 100vh;
+    background-color: orange;
+    padding: 2rem;
+    transition: all .3s;
+}
+
+header nav.open ul{
+    left: 92%;
+}
+
+header nav.open button{
+    margin-right: 15rem;
+}
+
+header nav li{
+    height: auto;
+}
+
+article{
+    position: relative;
+    padding: 6rem;
+}
+
+article h2{
+    position: relative;
+}
+
+article::before, article h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: orange;
+
+}
+
+article::before {
+    width: 2rem;
+    height: 100%;
+}
+
+article h2::before {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    top: -2rem;
+    left: -8.5rem;
+    transition: all .3s;
+}
+
+article.display h2::before{
+    background-color: white;
+    border: 1rem solid blue;
+}
