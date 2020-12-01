@@ -1,0 +1,17 @@
+ul{
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+
+li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+li.display{
+    opacity: 1;
+}
