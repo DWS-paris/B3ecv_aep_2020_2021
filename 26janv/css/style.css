@@ -1,0 +1,191 @@
+/* 
+Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%; /* 1rem => 10px */
+    }
+
+    body{
+        font-size: 1.6rem; /* => 16px */
+        background-color: #131313;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        background-image: url(../img/background.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    h1, h2{
+        text-transform: uppercase;
+    }
+
+    .maxWidth{
+        max-width: 90rem;
+        margin: auto;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    li{
+        list-style: none;
+    }
+/**/
+
+/* 
+Header
+*/
+    header {
+        height: calc(100vh - 4rem);
+        position: relative;
+    }
+
+    header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        line-height: 1;
+        font-size: 5rem;
+        font-family: sans-serif;
+    }
+
+    header h1 span {
+        display: block;
+        font-size: .5em;
+        font-weight: 100;
+        font-family: serif;
+    }
+
+    #mainNav{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #mainNav img{
+        width: 6rem;
+    }
+
+    #mainNav button {
+        font-size: 3rem;
+        line-height: 0;
+        padding: 1rem;
+        position: relative;
+        z-index: 2000;
+        width: 5rem;
+        text-align: center;
+    }
+
+    #mainNav ul {
+        position: fixed;
+        top: 0;
+        right: -40%;
+        width: 40%;
+        background: black;
+        text-align: left;
+        padding: 10rem 2rem 2rem 2rem;
+        height: 100vh;
+        z-index: 1000;
+        transition: .3s all;
+    }
+
+    #mainNav ul.open{
+        right: 0;
+    }
+/**/
+
+/* 
+Main
+*/
+    #portfolio li{
+        margin-top: 2rem;
+    }
+
+    #portfolio img{
+        max-width: 38rem;
+    }
+/**/
+
+/* 
+Requêtes media
+*/
+    @media print{
+        body{
+            background-color: white;
+            color: black;
+            background-image: none;
+        }
+
+        nav{
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 650px){
+        #portfolio ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #portfolio li{
+            width: calc( 50% - 1rem );
+        }
+
+        #portfolio img{
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 850px){
+        #portfolio li{
+            width: calc( 33.333% - 1rem );
+        }
+    }
+
+    @media screen and (min-width: 900px){
+        /* Le css présent dans cette requête ne s'appliquera que sur les écran d'une taille minimale de 900px */
+        
+        /* Masquer le bouton burger */
+        nav button{
+            display: none;
+        }
+
+        /* Afficher la navigation en version desktop */
+        #mainNav ul{
+            position: initial;
+            width: auto;
+            padding: 0;
+            background-color: transparent;
+            height: auto;
+            display: flex;
+        }
+
+        #mainNav ul li{
+            margin-left: 2rem;
+            border: .1rem solid white;
+            padding: 1rem;
+        }
+
+        #mainNav ul li:first-child{
+            display: none;
+        }
+    }
+
+/**/
