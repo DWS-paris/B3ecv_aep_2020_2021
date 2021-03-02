@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Home",
+        "content": "home"
+    },
+    {
+        "name": "Portfolio",
+        "content": "portfolio"
+    },
+    {
+        "name": "Contact",
+        "content": "contact"
+    }
+]

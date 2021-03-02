@@ -1,0 +1,5 @@
+header, main, footer{
+    max-width: 60rem;
+    margin: auto;
+    padding: 2rem;
+}

@@ -1,0 +1,240 @@
+/* 
+Reset
+*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+li{
+    margin-bottom: 0;
+}
+
+.hidden{
+    display: none !important;
+}
+/**/
+
+/* 
+Main
+*/
+header > *, footer > *, main{
+    margin: auto;
+    width: 100%;
+    max-width: 90rem;
+}
+
+header, main, footer{
+    padding: 0 2rem;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+main section{
+    height: calc( 100vh - 17rem );
+    overflow: auto;
+}
+/**/
+
+/* 
+Header
+*/
+header{
+    margin-top: 2rem;
+    height: 10rem;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: .5rem 0 .7rem 0;
+    border-top: .1rem solid grey;
+    border-bottom: .1rem solid grey;
+}
+
+header li{
+    width: 33.333%;
+    margin-bottom: 0;
+}
+
+header li:nth-child(2){
+    text-align: center;
+}
+
+header li:last-child{
+    text-align: right;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+nav a{
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    padding: .5rem .7rem;
+}
+/**/
+
+/* 
+Home
+*/
+#home img{
+    width: 30rem;
+    float: left;
+    margin: 0 3rem 2rem 0;
+}
+/**/
+
+/* 
+Portfolio
+*/
+#portfolio ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#portfolio li {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 5rem;
+}
+
+#portfolio li:last-of-type{
+    margin-bottom: 0;
+}
+
+#portfolio li div{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s;
+}
+
+#portfolio li div:hover{
+    opacity: 1;
+}
+
+#portfolio li a {
+    margin: auto;
+    background-color: white;
+    padding: 0 .5rem;
+    font-weight: 900;
+}
+/**/
+
+/* 
+Contacts
+*/
+#contacts{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts article{
+    margin: auto;
+}
+
+#contacts li{
+    display: inline-block;
+}
+
+#contacts a{
+    font-size: 3rem;
+    color: white;
+    padding: 1rem;
+    background-color: black;
+    display: inline-block;
+    width: 7rem;
+    margin: 0 .5rem;
+    border: .5rem solid white;
+}
+/**/
+
+/* 
+Footer
+*/
+footer{
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul{
+    width: 100%;
+    margin: auto;
+}
+/**/
+
+/* 
+Media queries
+*/
+@media print{
+    body{
+        color: black;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 750px){
+    /* 
+    Portfolio
+    */
+        #portfolio li{
+            width: 47%;   
+        }
+
+        #portfolio li:nth-child(5) {
+            margin-bottom: 0;
+        }
+    /**/
+}
+
+@media screen and (min-width: 950px){
+    main{
+        padding: 0;
+    }
+    
+    /* 
+    Portfolio
+    */
+        #portfolio li{
+            width: 25rem;   
+            height: 25rem;   
+        }
+
+        #portfolio li:nth-child(4) {
+            margin-bottom: 0;
+        }
+    /**/
+}
+/**/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP : ToDo MVC</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+        <!-- Charger le CSS de la page APRES les CSS extenes -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>ToDo.mvc</h1>
+        </header>
+
+        <main>
+            <section>
+                <form action="#" id="addTaskForm">
+                    <input id="newTask" type="text" required minlength="2" placeholder="Ajouter une tâche">
+                </form>
+            </section>
+            
+            <section>
+                <ul id="taskList"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Under <a href="https://fr.wikipedia.org/wiki/WTFPL" target="_blank">WTFPL</a> bt Julien Noyer</p>
+        </footer>
+        
+        <!-- Ajouter le script juste avant la fin du body -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

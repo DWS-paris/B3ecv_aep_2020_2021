@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atelier FrontEnd</title>
+
+        <!-- [CDN] Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <!-- [CDN] Milligram -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+        <!-- Main Style -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Michelangelo Merisi da Caravaggio</h1>
+
+            <nav>
+                <ul>
+                    <li><a id="homeBtn" href="#home" data-link="home">Accueil</a></li>
+                    <li><a id="portfolioBtn" href="#portfolio" data-link="portfolio">Portfolio</a></li>
+                    <li><a id="contactsBtn" href="#contacts" data-link="contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home">
+                <h2>Michelangelo Merisi da Caravaggio dit <strong>"Le Caravage"</strong></h2>
+                <img src="./img/profil.jpg" alt="Photo de profil">
+
+                <p>Michelangelo Merisi da Caravaggio, en français Caravage ou le Caravage, est un peintre italien né le 29 septembre 1571 à Milan et mort le 18 juillet 1610 à Porto Ercole.</p>
+
+                <p>Son œuvre puissante et novatrice révolutionne la peinture du xviie siècle par son caractère naturaliste, son réalisme parfois brutal et l'emploi appuyé de la technique du clair-obscur allant jusqu'au ténébrisme. Il connaît la célébrité de son vivant et influence nombre de grands peintres après lui, comme en témoigne l'apparition du caravagisme.</p>
+
+                <p>Il obtient en effet un succès foudroyant au début des années 1600 : travaillant dans un milieu de protecteurs cultivés, il obtient des commandes prestigieuses et des collectionneurs de très haut rang recherchent ses peintures. Mais ensuite Caravage entre dans une période difficile. En 1606, après de nombreux démêlés avec la justice des États pontificaux, il blesse mortellement un adversaire au cours d'un duel. Il doit alors quitter Rome et passe le reste de sa vie en exil, à Naples, à Malte et en Sicile. Jusqu'en 1610, l'année de sa mort à l'âge de 38 ans, ses peintures sont en partie destinées à racheter cette faute. Toutefois, certains éléments biographiques portant sur ses mœurs sont aujourd'hui revus, car des recherches historiques récentes remettent en cause le portrait peu flatteur qui a été longtemps propagé par des sources du xviie siècle et sur lesquelles on ne peut plus désormais se fonder.</p>
+
+                <p>Après une longue période d'oubli critique, il faut attendre le début du xxe siècle pour que le génie de Caravage soit pleinement reconnu, indépendamment de sa réputation sulfureuse. Son succès populaire donne lieu à une multitude de romans et de films, à côté des expositions et des innombrables publications scientifiques qui, depuis un siècle, en renouvellent complètement l'image. Il est actuellement représenté dans les plus grands musées du monde, malgré le nombre limité de peintures qui ont survécu. Toutefois certains tableaux que l'on découvre depuis un siècle posent encore des questions d'attribution.</p>
+            </section>
+
+            <section id="portfolio" class="hidden">
+                <h2>Liste de peintures du Caravage</h2>
+                <ul>
+                    <li style="background-image: url(./img/portfolio1.jpg);">
+                        <div><a href="#" data-file="./img/portfolio1.jpg" data-title="Le Narcisse">Le Narcisse</a></div>
+                    </li>
+                
+                    <li style="background-image: url(./img/portfolio2.jpg);">
+                        <div><a href="#" data-file="./img/portfolio2.jpg" data-title="Le Souper à Emmaüs">Le Souper à Emmaüs</a></div>
+                    </li>
+                
+                    <li style="background-image: url(./img/portfolio3.jpg);">
+                        <div><a href="#" data-file="./img/portfolio3.jpg" data-title="Saint-Jérôme">Saint-Jérôme</a></div>
+                    </li>
+                
+                    <li style="background-image: url(./img/portfolio4.jpg);">
+                        <div><a href="#" data-file="./img/portfolio4.jpg" data-title="Awakened by Fire">Awakened by Fire</a></div>
+                    </li>
+                
+                    <li style="background-image: url(./img/portfolio5.jpg);">
+                        <div><a href="#" data-file="./img/portfolio5.jpg" data-title="Le Joueur de luth">Le Joueur de luth</a></div>
+                    </li>
+                
+                    <li style="background-image: url(./img/portfolio6.jpg);">
+                        <div><a href="#" data-file="./img/portfolio6.jpg" data-title="Bacchus">Bacchus</a></div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="image" class="hidden"></section>
+
+            <section id="contacts" class="hidden">
+                <article>
+                    <h2>Contacter Michelangelo Merisi da Caravaggio</h2>
+                    <ul>
+                        <li><a href="mailto:contact@email.com"><i class="far fa-envelope"></i></a></li>
+                        <li><a href="tel:0144823049"><i class="fas fa-phone"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li>&copy; 2020 / Under <a href="https://fr.wikipedia.org/wiki/WTFPL" target="_blank" rel="noopener noreferrer">WTFPL</a></li>
+                <li>By <a href="https://www.linkedin.com/in/julien-n-21219b28/" target="_blank" rel="noopener noreferrer">Julien Noyer</a></li>
+            </ul>
+        </footer>
+
+        <!-- Main Javascript -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

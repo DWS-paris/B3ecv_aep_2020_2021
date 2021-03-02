@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    https://hackmd.io/3rWhEYaxS8GXHvv7XO8YMA
+
+    <script>
+        let rawData = [["aristote","1:42:201","1:42:085","1:41:862", "10"],["socrate","1:39:982","1:40:085","1:39:862", "12"],["platon","2:05:120","2:05:250","2:05:800", "3"],["michel ange","1:43:231","1:43:200","1:41:862", "1"],["vinci","1:10:201","1:10:085","1:10:862", "5"],["tim berners-lee","3:42:201","3:42:085","3:41:862", "25"],["idriss aberkane","1:00:201","1:00:085","1:00:862", "0" ]]
+
+        let data = [];
+
+        for( let item of rawData ){
+            data.push({
+                name: item[0],
+                gap: +item[4]
+            })
+        }
+
+        let sorted = false;
+
+        while( sorted == false ){
+            sorted = true;
+
+            for( let i = 0; i < data.length; i++ ){
+                if( data[i + 1] !== undefined && data[i].gap > data[i + 1].gap ){
+                    let temp = data[i + 1];
+                    data[i + 1] = data[i]
+                    data[i] = temp;
+
+                    sorted = false
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

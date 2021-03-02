@@ -1,0 +1,95 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Gérer la taille des baslises */
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une base 16 à uunne base 10 */
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-family: sans-serif;
+        font-size: 1.6rem; /* => 16px */
+    }
+
+    img{
+        max-width: 100%;
+    }
+/**/
+
+/* 
+General
+*/
+    #flexBox, #game{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header, footer{
+        background-color: #eee;
+    }
+
+    header{
+        height: 5rem;
+    }
+
+    footer{
+        height: 3rem;
+    }
+
+    main{
+        height: calc( 100vh - 8rem );
+    }
+
+    .hidden{
+        display: none !important;
+    }
+/**/
+
+/* 
+Main
+*/
+    #home{
+        height: 100%;
+        display: flex;
+    }
+
+    #home  form{
+        margin: auto;
+    }
+
+    #game{
+        height: 100%;
+    }
+
+    #gamePlay{
+        height: 9rem;
+    }
+
+    #scores{
+        height: 5rem;
+    }
+
+    #computerGame{
+        height: calc(100% - 14rem);
+    }
+
+    #gamePlay ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    #gamePlay li{
+        width: 30%;
+    }
+/**/

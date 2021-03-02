@@ -1,0 +1,149 @@
+/* 
+Reset
+*/  
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@100&display=swap');
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* CSS3 */
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url(../img/background.png);
+        transition: background .3s;
+}
+
+    h1, h2{
+        font-family: 'Roboto Slab', serif;
+        transition: color .3s;
+}
+
+    h1{
+        font-size: 4.6rem;
+        margin: auto;
+    }
+
+    h2{
+        font-size: 3.6rem;
+    }
+/**/
+
+/* 
+Global
+*/
+    header, main, footer{
+        max-width: 90rem;
+        margin: auto;
+    }
+
+    header, footer{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main{
+        height: calc( 100vh - 12rem );
+        position: relative;
+        padding: 4rem 0;
+    }
+
+    header{
+        height: 8rem;
+    }
+
+    footer{
+        height: 4rem;
+    }
+
+    header, article, footer{
+        background-color: white;
+        box-shadow: 0 0 1rem rgb(0 0 0 / .3);
+    }
+/**/
+
+/* 
+Main
+*/
+    section{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    article{
+        width: 40%;
+        padding: 4rem;
+        opacity: 0;
+        transition: opacity .3s;
+}
+
+    .display{
+        opacity: 1;
+    }
+
+    select {
+        position: absolute;
+        top: 48%;
+        width: 100%;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+/**/
+
+/* 
+Spec
+*/
+    footer p{
+        margin: auto;
+    }
+/**/
+
+/* 
+Colors
+*/
+    .green{
+        background-color: green;
+    }
+
+    .green h1, .green h2{
+        color: green;
+    }
+
+    .yellow{
+        background-color: #B7B514;
+    }
+
+    .yellow h1, .yellow h2{
+        color: #B7B514;
+    }
+
+    .red{
+        background-color: red;
+    }
+
+    .red h1, .red h2{
+        color: red;
+    }
+
+    .blue{
+        background-color: blue;
+    }
+
+    .blue h1, .blue h2{
+        color: blue;
+    }
+/**/

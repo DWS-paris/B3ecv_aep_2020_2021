@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chifoumy</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        
+        <div id="flexBox">
+
+            <header>
+                <h1>Chifoumy</h1>
+            </header>
+
+            <main>
+
+                <section id="home">
+                    <form action="#">
+                        <input type="text" name="pseudo" minlength="2" required placeholder="Définissez votre pseudo">
+                        <button type="submit">OK</button>
+                    </form>
+                </section>
+
+                <section id="game" class="hidden">
+                    <article id="computerGame"></article>
+
+                    <article id="gamePlay">
+                        <ul>
+                            <li>
+                                <button type="button" data-game="pierre"><img src="./img/pierre.svg" alt="Pierre"></button>
+                            </li>
+                            <li>
+                                <button type="button" data-game="feuille"><img src="./img/feuille.svg" alt="Feuille"></button>
+                            </li>
+                            <li>
+                                <button type="button" data-game="ciseaux"><img src="./img/ciseaux.svg" alt="Ciseaux"></button>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article id="scores">
+                        <span id="userPseudo"></span> <span id="humanScore">0</span> | Machin <span id="machinScore">0</span>
+                    </article>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2020-2021 Under WTFPL</p>
+            </footer>
+
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

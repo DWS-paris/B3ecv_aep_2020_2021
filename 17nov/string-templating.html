@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String templating</title>
+    </head>
+    <body>
+        <h1></h1>
+        <ul id="es5"></ul>
+        <ul id="es6"></ul>
+
+        <script>
+
+            // Création de variables
+            var title = document.querySelector('h1');
+            var listes5 = document.querySelector('#es5');
+            var listes6 = document.querySelector('#es6');
+
+            var homeTitle = "Accueil";
+            var portfolioTitle = "Portfolio";
+            var contactTitle = "Contacts";
+
+            console.log(title, listes5);
+
+            // Modifier le HTMl du titre
+            title.innerHTML = "Julien <i>Noyer</i>";
+
+            // Ajouter des <li> dans la liste5 en ES5
+            listes5.innerHTML = "" +
+            "<li>" + homeTitle + "</li>" +
+            "<li>" + portfolioTitle + "</li>" + 
+            "<li>" + contactTitle + "</li>";
+
+            // Ajouter des <li> dans la liste5 en ES6
+            listes6.innerHTML = `
+                <li>${homeTitle}</li>
+                <li>${portfolioTitle}</li>
+                <li>${contactTitle}</li>
+            `;
+        </script>
+    </body>
+</html>
