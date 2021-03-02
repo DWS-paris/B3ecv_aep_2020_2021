@@ -1,51 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+
 header, main, footer{
     max-width: 90rem;
     margin: auto;
     padding: 2rem;
 }
 
-#mainNavigation {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    list-style: none;
-    display: none;
-}
-
-#mainNavigation.displayed{
-    display: flex;
+a{
+    color: inherit;
 }
 
 /* 
-Requêtes média
-- A partir de 750px de large, les liens de la navigation sont sur une seule ligne
+Common
 */
-    @media screen and (min-width: 750px){
-        #mainNavigation {
-            display: flex;
-            list-style: none;
-            position: initial;
-            width: auto;
-            height: auto;
-            background: transparent;
-            flex-direction: row;
-            justify-content: left;
-        }
+    .transitionAll{
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+    }
+/**/
 
-        nav li{
-            margin-left: 1rem;
-        }
 
-        #burgerBtn{
-            display: none;
-        }
+/* 
+Header
+*/
+
+
+    #navContent.displayed{
+        left: 0;
+    }
+
+    #navContent, #burgerContent{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #burgerContent{
+        text-align: center;
+    }
+
+    #navContent{
+        position: fixed;
+        z-index: 1000;
+        left: -50vw;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+        background-color: #ff5851;
+        padding: 5rem 5rem 5rem 13rem;
+        color: white;
+        opacity: 1;
+    }
+
+    #navContent ul, #burgerContent button{
+        margin: auto;
+        color: white;
+        padding: 2rem;
+    }
+
+    #burgerContent button{
+        color: #ff5851;
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+    }
+
+    #navContent ul{
+        width: 100%;
+        list-style: none;
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    #burgerContent{
+        background-color: white;
+        z-index: 1001;
     }
 /**/

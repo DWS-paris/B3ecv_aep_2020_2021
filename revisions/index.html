@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Révisions JS</title>
+
+        <style>
+            body, a{
+                transition: all .3s;
+            }
+
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .selected{
+                border-left: 1rem solid black;
+                padding-left: .5rem;
+            }
+
+            #loading{
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: white;
+                display: none;
+                flex-direction: column;
+            }
+
+            #loading img{
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loading">
+            <img src="./loading.svg" alt="loading">
+        </div>
+        <ul id="navigation"></ul>
+    </body>
+
+    <script>
+        // Créer une variable qui capte la balise loading
+        const loadingTag = document.querySelector('#loading');
+
+        // Créer une fonction pour gérer le loading
+        const displayLoading = (state) => {
+            // Vérifier l'état
+            if( state === 'open' ){
+                loadingTag.style.display = "flex"
+            }
+            else{
+                setTimeout(() => {
+                    loadingTag.style.display = "none"
+                }, 2000);
+            }
+        }
+
+        // Afficher le loading
+        displayLoading('open');
+
+        // Créer une variable qui capte la balise body
+        const bodyTag = document.querySelector('body');
+
+        // Créer une variable qui capte la balise ul#navigation
+        const mainNavigation = document.querySelector('#navigation');
+
+        // Créer un tableau Javascript contenant 3 objets : Home, Portfolio, About, Contacts.
+        const navigationList = [
+            {
+                content: "Home",
+                url: "/",
+                color: "green",
+                selected: true
+            },
+            {
+                content: "Services",
+                url: "/services",
+                color: "blue",
+                selected: false
+            },
+            {
+                content: "Portfolio",
+                url: "/portfolio",
+                color: "yellow",
+                selected: false
+            },
+            {
+                content: "About",
+                url: "/about",
+                color: "red",
+                selected: false
+            },
+            {
+                content: "Contacts",
+                url: "/contacts",
+                color: "purple",
+                selected: false
+            }
+        ];
+
+
+        // Faire une boucle sur un  tableau
+        for( let object of navigationList ){
+            // Vérifier si la propriété selected est égale à true
+            if( object.selected ){
+                // Ajouter une balise LI > A.selected pour chaque objet dans ul#navigation
+                mainNavigation.innerHTML += `
+                    <li>
+                        <a class="navLink selected" href="${object.url}" data-color="${object.color}">
+                            ${object.content}
+                        </a>
+                    </li>
+                `;
+
+                // Changer la couleur du body
+                bodyTag.style.background = object.color;
+            }
+            else{
+                // Ajouter une balise LI > A pour chaque objet dans ul#navigation
+                mainNavigation.innerHTML += `
+                    <li>
+                        <a class="navLink" href="${object.url}" data-color="${object.color}">
+                            ${object.content}
+                        </a>
+                    </li>
+                `;
+            };
+        }
+
+        // Masquer le loading
+        displayLoading('close');
+
+        // Capter toutes les balise .navLink
+        const navLinks = document.querySelectorAll('.navLink');
+
+        // Faire une boucle sur le tableau navLinks
+        for( let link of navLinks ){
+            // Capter le clic sur les liens de la navigation
+            link.addEventListener('click', (event) => {
+                // Bloquer le comportement par défaut de la balise a
+                event.preventDefault();
+
+                // Récupérer la valeur de l'attribut data-color
+                const linkColor = link.getAttribute('data-color');
+
+                // Changer la couleur du fond du body
+                bodyTag.style.background = linkColor;
+
+                // Sélectionner la balise ayant la classe selected pour la supprimer
+                document.querySelector('.selected').classList.remove('selected');
+
+                // Ajouter la classe selected sur le lien
+                link.classList.add('selected')
+
+                // Afficher le loading
+                displayLoading('open');
+
+                // Masquer le loading
+                displayLoading('close');
+            });
+        }
+
+    </script>
+</html>

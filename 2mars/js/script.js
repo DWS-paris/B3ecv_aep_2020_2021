@@ -2,6 +2,7 @@
 Fonctions
 */
     const fetchRequest = url => {
+        console.log('Start Fetch', url)
         // Renvoyer une promesse
         return new Promise( ( resolve, reject ) => {
             // Capter un flux JSON (API)
@@ -29,6 +30,7 @@ Fonctions
     }
 
     const displayNavigation = ( tag, data ) => {
+        console.log( tag, data )
         // Faire une boucle sur la collection de données (tableau d'objets Javascript)
         for( let item of data ){
             // Générer les balises de la navigation
@@ -129,7 +131,7 @@ Attendre le chargement du DOM
             displayNavigation('#mainNavigation', data);
 
             // Lancer le burger menu
-            menuInteraction("#burgerBtn", '#mainNavigation');
+            menuInteraction("#burgerBtn", '#navContent');
         })
         .catch( error => {
             console.log(error)
