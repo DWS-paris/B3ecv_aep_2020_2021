@@ -1,6 +1,30 @@
 /* 
 Fonctions
 */
+    const toggleLoading = (htmlTag, state) => {
+        const loadingTag = document.querySelector(htmlTag)
+
+        // Vérifier l'état
+        if( state === 'anim' ){
+            console.log('open loading')
+            // Ajouter les classes pour afficher le loading
+            loadingTag.classList.add('display')
+
+            // Lancer la transition
+            setTimeout(() => {
+                loadingTag.classList.add('anim')
+            }, 10);
+        }
+        else{
+            // Supprimer la classe anim et attendre 300ml
+            loadingTag.classList.remove('anim');
+            setTimeout(() => {
+                // Supprimer la classe display
+                loadingTag.classList.remove('display');
+            }, 300);
+        }
+    }
+
     const fetchRequest = url => {
         console.log('Start Fetch', url)
         // Renvoyer une promesse
@@ -51,11 +75,19 @@ Fonctions
                     // Bloquer le comportement par défaut de la balise A
                     event.preventDefault();
 
-                    // Afficher dans le DOM les bonnes balises HTML
-                    displayPage(item.getAttribute('href'));
+                    // Afficher le loading
+                    toggleLoading('#loading', 'anim');
 
-                    // Masquer le burger menu
-                    document.querySelector(tag).classList.remove('displayed');
+                    setTimeout(() => {
+                        // Masquer le burger menu
+                        document.querySelector("#navContent").classList.remove('displayed')
+
+                        // Afficher dans le DOM les bonnes balises HTML
+                        displayPage(item.getAttribute('href'));
+
+                        // Masquer le burger menu
+                        document.querySelector(tag).classList.remove('displayed');
+                    }, 300);
                 })
             }
         //
@@ -106,6 +138,11 @@ Fonctions
 
                 document.querySelector('main').innerHTML += portfolioList;
             }
+
+            setTimeout(() => {
+                // Masquer le loading
+                toggleLoading('#loading', 'close');
+            }, 1000);
         })
         .catch( error => {
             console.log(error)
@@ -132,6 +169,12 @@ Attendre le chargement du DOM
 
             // Lancer le burger menu
             menuInteraction("#burgerBtn", '#navContent');
+
+            setTimeout(() => {
+                // Masquer le loading
+                toggleLoading('#loading', 'close');
+            }, 1000);
+            
         })
         .catch( error => {
             console.log(error)
